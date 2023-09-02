@@ -65,7 +65,9 @@ initPokemon();
 searchInput.addEventListener("input", function(e){
     const pokeNames = document.querySelectorAll(".poke-name");
     const search = searchInput.value.toLowerCase();
-    //Burada toLoweCase dememizin sebebi, mobilden girdiğimizde, ilk harfler büyük bastığından dolayı, search çalışmıyabiliyormuş. Bunu çözmek için değişkeni küçük harfe dönüştürüyoruz.
+    //Burada toLoweCase() dememizin sebebi, mobilden girdiğimizde, 
+    //ilk harfler büyük bastığından dolayı, search çalışmıyor. 
+    //Bunu çözmek için value değerini küçük harfe dönüştürüyoruz.
 
     pokeNames.forEach(pokeName => {
         pokeName.parentElement.style.display = "block";
